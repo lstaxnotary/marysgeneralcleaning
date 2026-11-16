@@ -129,6 +129,10 @@ footer{background:var(--navy);color:#b9d8d2;padding:44px 0 30px;text-align:cente
 footer .logo{justify-content:center;color:#fff;margin-bottom:12px}
 footer p{font-size:.86rem;margin-bottom:6px}
 footer a{color:#7ef0dd;text-decoration:none}
+
+/* Contact-only replacement */
+#quote .wrap>*{min-width:0}#quote .contact-line{overflow-wrap:anywhere}
+.marys-contact{padding:28px;background:#fff;border:1px solid #d1e5df;border-radius:18px;min-width:0}.marys-contact h3{font-size:25px;margin:0 0 12px}.marys-contact p{line-height:1.65;margin:12px 0}.marys-options{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.marys-options button{font:inherit;padding:10px 13px;border:1px solid #0d9488;border-radius:9px;background:white;color:#115e59;cursor:pointer}.marys-options button[aria-pressed=true]{background:#115e59;color:white}.marys-review{padding:18px;background:#f0fdfa;border-radius:12px;overflow-wrap:anywhere}.marys-review blockquote{margin:12px 0 20px;line-height:1.6}.marys-review a,.marys-calls a{display:inline-block;background:#115e59;color:white;padding:12px 16px;border-radius:8px;text-decoration:none;margin:4px 6px 4px 0}.marys-protect{margin:20px 0;padding:16px;border-left:4px solid #0d9488;background:#f0fdfa}.marys-contact [hidden]{display:none!important}@media(max-width:500px){.marys-contact{padding:20px}.marys-calls a{display:block;text-align:center}}
 </style>
 </head>
 <body>
@@ -256,38 +260,7 @@ footer a{color:#7ef0dd;text-decoration:none}
       <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>info@marysgeneralcleaning.com</div>
       <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Lun - Vie, 9 AM - 6 PM</div>
     </div>
-    <form class="qform reveal" id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="112c2c5a-01ca-4a03-8d81-9f18e0cf0558">
-      <input type="hidden" name="subject" value="Nueva solicitud de cotizacion - marysgeneralcleaning.com">
-      <input type="checkbox" name="botcheck" style="display:none">
-      <div class="frow">
-        <div class="fgroup"><label for="name">Su nombre</label><input id="name" name="name" type="text" required placeholder="Nombre completo"></div>
-        <div class="fgroup"><label for="phone">Telefono</label><input id="phone" name="phone" type="tel" required placeholder="(305) 555-0123"></div>
-      </div>
-      <div class="frow">
-        <div class="fgroup"><label for="service">Servicio que necesita</label><select id="service" name="service" required>
-          <option value="" disabled selected>Elija un servicio</option>
-          <option>Limpieza Residencial</option>
-          <option>Limpieza Comercial y Oficinas</option>
-          <option>Limpieza Profunda</option>
-          <option>Mudanza (Entrada / Salida)</option>
-          <option>Otro servicio</option>
-        </select></div>
-        <div class="fgroup"><label for="when">Cuando lo necesita?</label><select id="when" name="timing" required>
-          <option value="" disabled selected>Elija una opcion</option>
-          <option>Lo antes posible</option>
-          <option>Esta semana</option>
-          <option>Este mes</option>
-          <option>Solo estoy comparando precios</option>
-        </select></div>
-      </div>
-      <div class="fgroup"><label for="message">Cuentenos sobre el espacio</label><textarea id="message" name="message" rows="4" placeholder="Cuartos/banos, pies cuadrados, tamano de la oficina, algo especial..."></textarea></div>
-      <button type="submit">Solicitar Mi Cotizacion Gratis</button>
-    </form>
-    <div class="form-ok" id="formOk">
-      <h3>Solicitud recibida!</h3>
-      <p>Gracias - le llamaremos pronto. Para algo urgente, llame al (305) 707-8504 o al (786) 873-4449.</p>
-    </div>
+    <div class="marys-contact"><h3>¿Qué limpieza necesita?</h3><p>Elija el servicio. Revise el mensaje y continúe en WhatsApp. No se envía nada hasta que usted pulse Enviar allí.</p><div class="marys-options"><button type="button" data-marys-service="0" aria-pressed="false">Limpieza residencial</button><button type="button" data-marys-service="1" aria-pressed="false">Comercial / oficinas</button><button type="button" data-marys-service="2" aria-pressed="false">Limpieza profunda</button><button type="button" data-marys-service="3" aria-pressed="false">Mudanzas: entrada / salida</button><button type="button" data-marys-service="4" aria-pressed="false">No estoy seguro</button></div><div class="marys-review" hidden aria-live="polite"><strong>Mensaje para MARYS · (305) 707-8504</strong><blockquote id="marys-message"></blockquote><a id="marys-whatsapp" href="https://wa.me/13057078504?text=Hola+MARYS%2C+me+gustar%C3%ADa+informaci%C3%B3n+sobre+limpieza+residencial.">Continuar en WhatsApp</a><p>Puede editar el mensaje en WhatsApp antes de enviarlo. Abrir el enlace no envía mensajes ni inicia llamadas. Las respuestas pueden tardar.</p></div><div class="marys-protect"><strong>Proteja su información</strong><p>No escriba aquí su dirección, códigos de entrada, datos de pago ni detalles privados. Este contacto no tiene campos para sus datos ni guarda solicitudes. Acuerde por separado cómo compartir la información necesaria.</p></div><p>El texto del servicio está en el enlace. WhatsApp se abre fuera de este sitio y aplica su propia política de privacidad. No es un chatbot ni una reserva confirmada.</p><div class="marys-calls"><a href="tel:+13057078504">Principal · (305) 707-8504</a><a href="tel:+17868734449">Secundaria · (786) 873-4449</a></div></div>
   </div>
 </section>
 
@@ -319,17 +292,8 @@ footer a{color:#7ef0dd;text-decoration:none}
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-document.getElementById('quoteForm').addEventListener('submit',async function(ev){
-  ev.preventDefault();
-  const f=this, btn=f.querySelector('button');
-  btn.disabled=true; btn.textContent='Enviando...';
-  try{
-    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(f)});
-    const d=await r.json();
-    if(d.success){f.style.display='none';document.getElementById('formOk').style.display='block';}
-    else{btn.disabled=false;btn.textContent='Solicitar Mi Cotizacion Gratis';alert('Algo salio mal - por favor llamenos al (305) 707-8504.');}
-  }catch(e){btn.disabled=false;btn.textContent='Solicitar Mi Cotizacion Gratis';alert('Problema de conexion - por favor llamenos al (305) 707-8504.');}
-});
+const marysLinks=[{"label": "Limpieza residencial", "text": "Hola MARYS, me gustaría información sobre limpieza residencial.", "url": "https://wa.me/13057078504?text=Hola+MARYS%2C+me+gustar%C3%ADa+informaci%C3%B3n+sobre+limpieza+residencial."}, {"label": "Comercial / oficinas", "text": "Hola MARYS, me gustaría información sobre limpieza comercial o de oficinas.", "url": "https://wa.me/13057078504?text=Hola+MARYS%2C+me+gustar%C3%ADa+informaci%C3%B3n+sobre+limpieza+comercial+o+de+oficinas."}, {"label": "Limpieza profunda", "text": "Hola MARYS, me gustaría información sobre limpieza profunda.", "url": "https://wa.me/13057078504?text=Hola+MARYS%2C+me+gustar%C3%ADa+informaci%C3%B3n+sobre+limpieza+profunda."}, {"label": "Mudanzas: entrada / salida", "text": "Hola MARYS, me gustaría información sobre limpieza de entrada o salida por mudanza.", "url": "https://wa.me/13057078504?text=Hola+MARYS%2C+me+gustar%C3%ADa+informaci%C3%B3n+sobre+limpieza+de+entrada+o+salida+por+mudanza."}, {"label": "No estoy seguro", "text": "Hola MARYS, me gustaría información sobre servicios de limpieza.", "url": "https://wa.me/13057078504?text=Hola+MARYS%2C+me+gustar%C3%ADa+informaci%C3%B3n+sobre+servicios+de+limpieza."}];
+document.querySelectorAll("[data-marys-service]").forEach(button=>button.addEventListener("click",()=>{const item=marysLinks[Number(button.dataset.marysService)];document.querySelectorAll("[data-marys-service]").forEach(b=>b.setAttribute("aria-pressed",String(b===button)));document.getElementById("marys-message").textContent=item.text;document.getElementById("marys-whatsapp").href=item.url;document.querySelector(".marys-review").hidden=false;}));
 </script>
 </body>
 </html>
