@@ -147,6 +147,10 @@ footer{background:var(--navy);color:#b9d8d2;padding:44px 0 30px;text-align:cente
 footer .logo{justify-content:center;color:#fff;margin-bottom:12px}
 footer p{font-size:.86rem;margin-bottom:6px}
 footer a{color:#7ef0dd;text-decoration:none}
+
+/* Contact-only replacement */
+#quote .wrap>*{min-width:0}#quote .contact-line{overflow-wrap:anywhere}
+.marys-contact{padding:28px;background:#fff;border:1px solid #d1e5df;border-radius:18px;min-width:0}.marys-contact h3{font-size:25px;margin:0 0 12px}.marys-contact p{line-height:1.65;margin:12px 0}.marys-options{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}.marys-options button{font:inherit;padding:10px 13px;border:1px solid #0d9488;border-radius:9px;background:white;color:#115e59;cursor:pointer}.marys-options button[aria-pressed=true]{background:#115e59;color:white}.marys-review{padding:18px;background:#f0fdfa;border-radius:12px;overflow-wrap:anywhere}.marys-review blockquote{margin:12px 0 20px;line-height:1.6}.marys-review a,.marys-calls a{display:inline-block;background:#115e59;color:white;padding:12px 16px;border-radius:8px;text-decoration:none;margin:4px 6px 4px 0}.marys-protect{margin:20px 0;padding:16px;border-left:4px solid #0d9488;background:#f0fdfa}.marys-contact [hidden]{display:none!important}@media(max-width:500px){.marys-contact{padding:20px}.marys-calls a{display:block;text-align:center}}
 </style>
 </head>
 <body>
@@ -274,38 +278,7 @@ footer a{color:#7ef0dd;text-decoration:none}
       <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>info@marysgeneralcleaning.com</div>
       <div class="contact-line"><svg viewBox="0 0 24 24" fill="none" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Mon - Fri, 9 AM - 6 PM</div>
     </div>
-    <form class="qform reveal" id="quoteForm" action="https://api.web3forms.com/submit" method="POST">
-      <input type="hidden" name="access_key" value="112c2c5a-01ca-4a03-8d81-9f18e0cf0558">
-      <input type="hidden" name="subject" value="New quote request - marysgeneralcleaning.com">
-      <input type="checkbox" name="botcheck" style="display:none">
-      <div class="frow">
-        <div class="fgroup"><label for="name">Your name</label><input id="name" name="name" type="text" required placeholder="Full name"></div>
-        <div class="fgroup"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required placeholder="(305) 555-0123"></div>
-      </div>
-      <div class="frow">
-        <div class="fgroup"><label for="service">Service needed</label><select id="service" name="service" required>
-          <option value="" disabled selected>Choose a service</option>
-          <option>Residential Cleaning</option>
-          <option>Commercial & Office Cleaning</option>
-          <option>Deep Cleaning</option>
-          <option>Move-In / Move-Out Cleaning</option>
-          <option>Something else</option>
-        </select></div>
-        <div class="fgroup"><label for="when">When do you need it?</label><select id="when" name="timing" required>
-          <option value="" disabled selected>Choose one</option>
-          <option>As soon as possible</option>
-          <option>This week</option>
-          <option>This month</option>
-          <option>I'm just comparing prices</option>
-        </select></div>
-      </div>
-      <div class="fgroup"><label for="message">Tell us about the space</label><textarea id="message" name="message" rows="4" placeholder="Bedrooms/bathrooms, square feet, office size, anything special..."></textarea></div>
-      <button type="submit">Request My Free Quote</button>
-    </form>
-    <div class="form-ok" id="formOk">
-      <h3>Request received!</h3>
-      <p>Thank you - we'll call you back shortly. For anything urgent, call (305) 707-8504 or (786) 873-4449.</p>
-    </div>
+    <div class="marys-contact"><h3>What cleaning do you need?</h3><p>Choose a service. Review the message and continue in WhatsApp. Nothing is sent until you press Send there.</p><div class="marys-options"><button type="button" data-marys-service="0" aria-pressed="false">Residential cleaning</button><button type="button" data-marys-service="1" aria-pressed="false">Commercial / office</button><button type="button" data-marys-service="2" aria-pressed="false">Deep cleaning</button><button type="button" data-marys-service="3" aria-pressed="false">Move-in / move-out</button><button type="button" data-marys-service="4" aria-pressed="false">Not sure</button></div><div class="marys-review" hidden aria-live="polite"><strong>Message to MARYS · (305) 707-8504</strong><blockquote id="marys-message"></blockquote><a id="marys-whatsapp" href="https://wa.me/13057078504?text=Hello+MARYS%2C+I+would+like+information+about+residential+cleaning.">Continue in WhatsApp</a><p>You can edit the message in WhatsApp before sending it. Opening the link does not send messages or start calls. Replies may take time.</p></div><div class="marys-protect"><strong>Protect your information</strong><p>Do not enter your address, entry codes, payment details or private information here. This contact option has no fields for your details and does not save requests. Agree separately on how to share any needed information.</p></div><p>The service text is in the link. WhatsApp opens outside this site and has its own privacy policy. This is not a chatbot or a confirmed booking.</p><div class="marys-calls"><a href="tel:+13057078504">Primary · (305) 707-8504</a><a href="tel:+17868734449">Secondary · (786) 873-4449</a></div></div>
   </div>
 </section>
 
@@ -337,17 +310,8 @@ footer a{color:#7ef0dd;text-decoration:none}
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-document.getElementById('quoteForm').addEventListener('submit',async function(ev){
-  ev.preventDefault();
-  const f=this, btn=f.querySelector('button');
-  btn.disabled=true; btn.textContent='Sending...';
-  try{
-    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(f)});
-    const d=await r.json();
-    if(d.success){f.style.display='none';document.getElementById('formOk').style.display='block';}
-    else{btn.disabled=false;btn.textContent='Request My Free Quote';alert('Something went wrong - please call us at (305) 707-8504.');}
-  }catch(e){btn.disabled=false;btn.textContent='Request My Free Quote';alert('Connection issue - please call us at (305) 707-8504.');}
-});
+const marysLinks=[{"label": "Residential cleaning", "text": "Hello MARYS, I would like information about residential cleaning.", "url": "https://wa.me/13057078504?text=Hello+MARYS%2C+I+would+like+information+about+residential+cleaning."}, {"label": "Commercial / office", "text": "Hello MARYS, I would like information about commercial or office cleaning.", "url": "https://wa.me/13057078504?text=Hello+MARYS%2C+I+would+like+information+about+commercial+or+office+cleaning."}, {"label": "Deep cleaning", "text": "Hello MARYS, I would like information about deep cleaning.", "url": "https://wa.me/13057078504?text=Hello+MARYS%2C+I+would+like+information+about+deep+cleaning."}, {"label": "Move-in / move-out", "text": "Hello MARYS, I would like information about move-in or move-out cleaning.", "url": "https://wa.me/13057078504?text=Hello+MARYS%2C+I+would+like+information+about+move-in+or+move-out+cleaning."}, {"label": "Not sure", "text": "Hello MARYS, I would like information about cleaning services.", "url": "https://wa.me/13057078504?text=Hello+MARYS%2C+I+would+like+information+about+cleaning+services."}];
+document.querySelectorAll("[data-marys-service]").forEach(button=>button.addEventListener("click",()=>{const item=marysLinks[Number(button.dataset.marysService)];document.querySelectorAll("[data-marys-service]").forEach(b=>b.setAttribute("aria-pressed",String(b===button)));document.getElementById("marys-message").textContent=item.text;document.getElementById("marys-whatsapp").href=item.url;document.querySelector(".marys-review").hidden=false;}));
 </script>
 </body>
 </html>
